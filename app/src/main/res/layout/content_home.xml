@@ -8,8 +8,7 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_home"
-    tools:context="com.example.leod.tasteprosperity.HomeActivity"
-    android:background="#FFFBE7">
+    tools:context="com.example.leod.tasteprosperity.HomeActivity">
 
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -29,10 +28,11 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/viewIngredientsBtn"
-                    android:scaleType="fitCenter"
+                    android:scaleType="fitXY"
                     android:adjustViewBounds="true"
                     android:layout_margin="16dp"
-                    android:src="@mipmap/ic_launcher"
+                    android:src="@drawable/test_ingredients"
+                    android:background="@null"
                     android:layout_weight=".5"
                     android:onClick="viewIngredient"/>
 
@@ -41,11 +41,12 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/viewProductsBtn"
-                    android:scaleType="fitCenter"
+                    android:scaleType="fitXY"
                     android:adjustViewBounds="true"
                     android:layout_margin="16dp"
-                    android:src="@mipmap/ic_launcher"
-                    android:layout_weight=".5" />
+                    android:src="@drawable/test_products"
+                    android:background="@null"
+                    android:layout_weight=".5"/>
 
             </LinearLayout>
 
@@ -60,8 +61,9 @@
                     android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:layout_margin="16dp"
-                    android:src="@mipmap/ic_launcher"
-                    android:layout_weight=".5" />
+                    android:src="@drawable/test_inventory"
+                    android:background="@null"
+                    android:layout_weight=".5"/>
 
 
                 <ImageButton
@@ -71,8 +73,9 @@
                     android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:layout_margin="16dp"
-                    android:src="@mipmap/ic_launcher"
-                    android:layout_weight=".5" />
+                    android:src="@drawable/test_sales"
+                    android:background="@null"
+                    android:layout_weight=".5"/>
 
             </LinearLayout>
 
@@ -84,11 +87,12 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/viewReportsBtn"
-                    android:scaleType="fitCenter"
+                    android:scaleType="fitXY"
                     android:adjustViewBounds="true"
                     android:layout_margin="16dp"
-                    android:src="@mipmap/ic_launcher"
-                    android:layout_weight=".5" />
+                    android:src="@drawable/test_reports"
+                    android:background="@null"
+                    android:layout_weight=".5"/>
 
                 <ImageButton
                     android:layout_width="0dp"
@@ -97,7 +101,8 @@
                     android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:layout_margin="16dp"
-                    android:src="@mipmap/ic_launcher"
+                    android:src="@drawable/test_logout"
+                    android:background="@null"
                     android:layout_weight=".5"
                     android:onClick="exitApp"/>
 

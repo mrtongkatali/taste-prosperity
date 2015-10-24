@@ -7,23 +7,30 @@
     tools:context="com.example.leod.tasteprosperity.IngredientActivity">
 
     <android.support.design.widget.AppBarLayout android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:theme="@style/AppTheme.NoActionBar.AppBarOverlay">
+        android:layout_width="match_parent">
 
         <android.support.v7.widget.Toolbar android:id="@+id/ingredientToolbar"
             android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
-            android:background="#F1592A"
-            app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay">
+            android:background="#F1592A">
 
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/home"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/ic_home_white_36dp"
                 android:background="#F1592A"
                 android:onClick="backToHome"
                 android:clickable="true"
                 android:contextClickable="true"
                 android:id="@+id/ingredientHomeBtn" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="INGREDIENTS"/>
 
         </android.support.v7.widget.Toolbar>
 
