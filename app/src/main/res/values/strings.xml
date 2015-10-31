@@ -6,7 +6,7 @@
     <string name="title_activity_product">ProductActivity</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="title_activity_ingredient">IngredientActivity</string>
-    <string name="homeToolbarTitle">TASTE OF PROSPERITY (Beta)</string>
+    <string name="homeToolbarTitle">TOP (v0.1)</string>
     <string name="addIngredientBtnText">ADD INGREDIENT</string>
     <string name="addIngredientsBtnTxt">ADD INGREDIENT</string>
 </resources>
