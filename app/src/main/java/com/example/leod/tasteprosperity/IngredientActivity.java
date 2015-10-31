@@ -5,10 +5,12 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -42,28 +44,39 @@ public class IngredientActivity extends AppCompatActivity {
                 TableRow.LayoutParams.WRAP_CONTENT
         );
 
-
-        int testCount = 100;
+        int testCount = 50;
         for(int i=0; i<testCount; i++) {
             TableRow tr = new TableRow(this);
 
+            int modulus = i % 2;
+
             tr.setId(100 + i);
             tr.setLayoutParams(tlParams);
+            tr.setBackgroundColor(((modulus == 0) ? Color.parseColor("#f7f6f4") : Color.WHITE));
+            tr.setPadding(0, 5, 0, 5);
 
-            TextView labelTV = new TextView(this);
-            labelTV.setId(200+i);
-            labelTV.setText("TV1");
-            labelTV.setTextColor(Color.RED);
-            labelTV.setLayoutParams(tlParams);
-            tr.addView(labelTV);
+            LinearLayout container = new LinearLayout(this);
+            container.setOrientation(LinearLayout.VERTICAL);
 
-            TextView valueTV = new TextView(this);
-            valueTV.setId(i);
-            valueTV.setText("TV2");
-            valueTV.setTextColor(Color.RED);
-            valueTV.setLayoutParams(tlParams);
-            tr.addView(valueTV);
+            TextView ingrdName = new TextView(this);
+            ingrdName.setTextSize(25);
+            ingrdName.setText("Spinach and Carrots Spinach");
+            ingrdName.setTextColor(Color.BLACK);
+            ingrdName.setLayoutParams(tlParams);
+            ingrdName.setPadding(5, 0, 0, 0);
+            container.addView(ingrdName);
 
+            TextView ingrdDescription = new TextView(this);
+            //ingrdDescription.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+            ingrdDescription.setTextSize(14);
+            ingrdDescription.setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+            ingrdDescription.setTextColor(Color.BLACK);
+            ingrdDescription.setLayoutParams(tlParams);
+            ingrdDescription.setPadding(5, 0, 0, 0);
+            //ingrdDescription.setWidth(container.getWidth());
+            container.addView(ingrdDescription);
+
+            tr.addView(container);
             ingredientsTblLayout.addView(tr, tlParams);
         }
     }
