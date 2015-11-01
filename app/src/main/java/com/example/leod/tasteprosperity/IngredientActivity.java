@@ -59,7 +59,7 @@ public class IngredientActivity extends AppCompatActivity {
             container.setOrientation(LinearLayout.VERTICAL);
 
             TextView ingrdName = new TextView(this);
-            ingrdName.setTextSize(25);
+            ingrdName.setTextSize(18);
             ingrdName.setText("Spinach and Carrots Spinach");
             ingrdName.setTextColor(Color.BLACK);
             ingrdName.setLayoutParams(tlParams);
@@ -68,7 +68,7 @@ public class IngredientActivity extends AppCompatActivity {
 
             TextView ingrdDescription = new TextView(this);
             //ingrdDescription.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
-            ingrdDescription.setTextSize(14);
+            ingrdDescription.setTextSize(10);
             ingrdDescription.setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
             ingrdDescription.setTextColor(Color.BLACK);
             ingrdDescription.setLayoutParams(tlParams);
