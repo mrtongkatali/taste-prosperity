@@ -2,119 +2,206 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     android:layout_height="match_parent"
     tools:showIn="@layout/activity_home"
-    tools:context="com.example.leod.tasteprosperity.HomeActivity">
+    tools:context="com.example.leod.tasteprosperity.HomeActivity"
+    android:background="@drawable/bg_food">
 
-
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingTop="30dp">
-
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="vertical"
+        android:weightSum="1">
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:orientation="vertical"
-            android:weightSum="1">
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="horizontal"
+        android:weightSum="1">
 
-            <LinearLayout
-                android:orientation="horizontal" android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".35">
 
                 <ImageButton
-                    android:layout_width="0dp"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
                     android:id="@+id/viewIngredientsBtn"
                     android:scaleType="fitXY"
                     android:adjustViewBounds="true"
                     android:layout_margin="16dp"
                     android:src="@drawable/ic_ingredients"
                     android:background="@null"
-                    android:padding="50dp"
-                    android:layout_weight=".5"
+                    android:padding="0dp"
                     android:onClick="viewIngredient"/>
 
 
-                <ImageButton
-                    android:layout_width="0dp"
+                <TextView android:id="@+id/ingredientsLbl"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewIngredientsBtn"
+                    android:layout_centerHorizontal="true"
+                    android:text="Ingredients"
+                    android:textColor="#aa771e"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+
+            <RelativeLayout android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".35">
+
+                <ImageButton
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
                     android:id="@+id/viewProductsBtn"
                     android:scaleType="fitXY"
                     android:adjustViewBounds="true"
                     android:layout_margin="16dp"
                     android:src="@drawable/ic_products"
                     android:background="@null"
-                    android:padding="50dp"
-                    android:layout_weight=".5"/>
+                    android:padding="0dp" />
 
-            </LinearLayout>
+                <TextView android:id="@+id/productsLbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/viewProductsBtn"
+                    android:text="Products"
+                    android:textColor="#aa771e"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
 
-            <LinearLayout
-                android:orientation="horizontal" android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".35">
 
                 <ImageButton
-                    android:layout_width="0dp"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/viewInventoryBtn"
-                    android:scaleType="fitCenter"
-                    android:adjustViewBounds="true"
-                    android:layout_margin="16dp"
-                    android:src="@drawable/ic_inventory"
-                    android:background="@null"
-                    android:padding="50dp"
-                    android:layout_weight=".5"/>
-
-
-                <ImageButton
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
                     android:id="@+id/viewSalesBtn"
-                    android:scaleType="fitCenter"
+                    android:scaleType="fitXY"
                     android:adjustViewBounds="true"
                     android:layout_margin="16dp"
                     android:src="@drawable/ic_order"
                     android:background="@null"
-                    android:padding="50dp"
-                    android:layout_weight=".5"/>
+                    android:padding="0dp"/>
 
-            </LinearLayout>
 
-            <LinearLayout
-                android:orientation="horizontal" android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                <TextView android:id="@+id/salesLbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/viewSalesBtn"
+                    android:text="Sales"
+                    android:textColor="#aa771e"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <!-- 2nd Part -->
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="horizontal"
+        android:weightSum="1">
+
+
+            <RelativeLayout android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".35">
 
                 <ImageButton
-                    android:layout_width="0dp"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/viewInventoryBtn"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:layout_margin="16dp"
+                    android:src="@drawable/ic_inventory"
+                    android:background="@null"
+                    android:padding="0dp"/>
+
+
+                <TextView android:id="@+id/inventoryLbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/viewInventoryBtn"
+                    android:text="Inventory"
+                    android:textColor="#aa771e"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".35">
+
+                <ImageButton
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
                     android:id="@+id/viewReportsBtn"
                     android:scaleType="fitXY"
                     android:adjustViewBounds="true"
                     android:layout_margin="16dp"
                     android:src="@drawable/ic_reports"
                     android:background="@null"
-                    android:padding="50dp"
-                    android:layout_weight=".5"/>
+                    android:padding="0dp"/>
+
+
+                <TextView android:id="@+id/reportsLbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/viewReportsBtn"
+                    android:text="Reports"
+                    android:textColor="#aa771e"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".35">
 
                 <ImageButton
-                    android:layout_width="0dp"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
                     android:id="@+id/logOutBtn"
-                    android:scaleType="fitCenter"
+                    android:scaleType="fitXY"
                     android:adjustViewBounds="true"
                     android:layout_margin="16dp"
                     android:src="@drawable/ic_logout"
                     android:background="@null"
-                    android:layout_weight=".5"
-                    android:padding="50dp"
+                    android:padding="0dp"
                     android:onClick="exitApp"/>
 
-            </LinearLayout>
+
+                <TextView android:id="@+id/logoutLbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/logOutBtn"
+                    android:text="Log Out"
+                    android:textColor="#aa771e"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
 
         </LinearLayout>
 
-    </ScrollView>
+
+    </LinearLayout>
+
 
 
 </RelativeLayout>

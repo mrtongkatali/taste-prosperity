@@ -3,17 +3,37 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFBE7">
+
+
     <LinearLayout
         android:orientation="vertical" android:layout_width="match_parent"
         android:layout_margin="16dp"
         android:layout_centerInParent="true"
         android:layout_height="wrap_content">
 
+        <RelativeLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relativeLayout"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:id="@+id/imageView"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="38dp"
+                android:src="@drawable/top"/>
+
+        </RelativeLayout>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="USERNAME"/>
+            android:text="USERNAME"
+            android:textSize="13dp" />
 
         <EditText
         android:layout_width="match_parent"
@@ -26,38 +46,42 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="PASSWORD"/>
+            android:text="PASSWORD"
+            android:textSize="13dp" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:id="@+id/etPassword"
-        android:layout_gravity="center_horizontal" />
-    <LinearLayout
-        android:orientation="horizontal" android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <Button
-            android:layout_width="0dp"
-            android:layout_weight=".5"
+        <EditText
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="LOGIN"
-            android:id="@+id/btnlogin"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginRight="5dp"
-            android:background="#F7941D"
-            android:textColor="#FFFFFF" />
-        <Button
-            android:layout_width="0dp"
-            android:layout_weight=".5"
-            android:layout_height="wrap_content"
-            android:text="CANCEL"
-            android:id="@+id/btncancel"
-            android:layout_gravity="center_horizontal"
-            android:background="#F7941D"
-            android:textColor="#FFFFFF" />
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/etPassword"
+            android:layout_gravity="center_horizontal" />
+        <LinearLayout
+            android:orientation="horizontal" android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:text="LOGIN"
+                android:id="@+id/btnlogin"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginRight="5dp"
+                android:background="#F7941D"
+                android:textColor="#FFFFFF"
+                android:textSize="13dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:text="CANCEL"
+                android:id="@+id/btncancel"
+                android:layout_gravity="center_horizontal"
+                android:background="#F7941D"
+                android:textColor="#FFFFFF"
+                android:textSize="13dp" />
 
-        </LinearLayout>
+            </LinearLayout>
     </LinearLayout>
+
 </RelativeLayout>
